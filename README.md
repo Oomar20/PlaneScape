@@ -33,4 +33,31 @@ This project is a **Flight Booking Application** built using **React** and **Vit
 
 ### Steps to Run:
 
+1. Install dependencies: Using npm:
+
+```sh
+npm install
+```
+
+2. Run the development server: Using npm:
+```sh
+npm run dev
+```
+
+3. Build the project (for production): Using npm:
+```sh
+npm run build
+```
+
+Backend Setup:
+If your project includes a backend (Express.js with MongoDB), follow these additional steps:
+
+Set up the backend: Ensure that your backend API server is running. It should be connected to MongoDB (using Mongoose).
+
+Start the backend server: After setting up the backend, run:
+
+```sh
+npm run server
+```
+
 

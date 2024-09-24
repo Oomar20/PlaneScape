@@ -4,9 +4,13 @@
 This project consists of three main pages:
 1. **Flight Search and Booking Page**
 
-![MainPage](./public/assets/Main Page.png)
-![My Flights Page](./public/assets/My Flights.png)
-![Not Found Page](./public/assets/Not Found Page.png)
+![image alt](https://github.com/Oomar20/PlaneScape/blob/main/Main%20Page.png?raw=true)
+
+2. **My Flights Page**
+![image alt](https://github.com/Oomar20/PlaneScape/blob/main/My%20Flights%20Page.png?raw=true)
+
+3. **Not Found Page**
+![image alt](https://github.com/Oomar20/PlaneScape/blob/main/Not%20Found%20Page.png?raw=true)
 
 This project is a **Flight Booking Application** built using **React** and **Vite**. It allows users to search for flights, view flight details, and book flights. The application also provides additional services such as car rentals, hotels, and travel packages.
 

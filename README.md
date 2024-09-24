@@ -1,5 +1,13 @@
 # React Flight Booking App
 
+
+This project consists of three main pages:
+1. **Flight Search and Booking Page**
+
+![Main Page](./public/assets/Main Page.png)
+![My Flights Page](./public/assets/My Flights.png)
+![Not Found Page](./public/assets/Not Found Page.png)
+
 This project is a **Flight Booking Application** built using **React** and **Vite**. It allows users to search for flights, view flight details, and book flights. The application also provides additional services such as car rentals, hotels, and travel packages.
 
 ## Features:

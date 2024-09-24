@@ -5,10 +5,8 @@ This project consists of three main pages:
 1. **Flight Search and Booking Page**
 
 ![image alt](https://github.com/Oomar20/PlaneScape/blob/main/Main%20Page.png?raw=true)
-
 2. **My Flights Page**
 ![image alt](https://github.com/Oomar20/PlaneScape/blob/main/My%20Flights%20Page.png?raw=true)
-
 3. **Not Found Page**
 ![image alt](https://github.com/Oomar20/PlaneScape/blob/main/Not%20Found%20Page.png?raw=true)
 

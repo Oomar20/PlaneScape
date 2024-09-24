@@ -1,11 +1,15 @@
-// Replace require with import
+// Import necessary packages using ES modules
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import dotenv from 'dotenv'; // Use import for dotenv
 
 // Import your models
-import Flight from './models/Flight.js';  // Make sure to add .js if you're using ES modules
+import Flight from './models/Flight.js';  // Ensure .js extension for ES modules
+
+// Load environment variables from .env file
+dotenv.config();  // This will load the variables from .env
 
 // Initialize the app
 const app = express();
@@ -14,14 +18,18 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+// Use the environment variables in your connection string
+const MONGODB_URI = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}/?retryWrites=true&w=majority&appName=${process.env.MONGODB_DB_NAME}`;
 
 // MongoDB connection 
-mongoose.connect('mongodb+srv://amrouaboukhaled:PD9BNWYp3Zx7NReQ@flightscluster.1vdha.mongodb.net/?retryWrites=true&w=majority&appName=FlightsCluster')
+mongoose.connect(MONGODB_URI, {
+    useNewUrlParser: true,  // Options for the connection
+    useUnifiedTopology: true,
+})
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
-
-/// POST endpoint to book flight
+// POST endpoint to book a flight
 app.post('/api/bookFlight', async (req, res) => {
     const { flightNumber, airlines, departureAirport, arrivalAirport, scheduleTime, estimatedLandingTime } = req.body;
 
@@ -43,7 +51,7 @@ app.post('/api/bookFlight', async (req, res) => {
     }
 });
 
-
+// GET endpoint to fetch all flights
 app.get('/api/flights', async (req, res) => {
     try {
         const flights = await Flight.find();  // Fetch all flights from MongoDB
@@ -53,7 +61,6 @@ app.get('/api/flights', async (req, res) => {
         res.status(500).json({ message: 'Error fetching flights', error });
     }
 });
-
 
 // Start the server
 const PORT = process.env.PORT || 5000;

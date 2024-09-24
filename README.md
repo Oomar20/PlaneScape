@@ -4,7 +4,7 @@
 This project consists of three main pages:
 1. **Flight Search and Booking Page**
 
-![Main Page](./public/assets/Main Page.png)
+![MainPage](./public/assets/Main Page.png)
 ![My Flights Page](./public/assets/My Flights.png)
 ![Not Found Page](./public/assets/Not Found Page.png)
 
